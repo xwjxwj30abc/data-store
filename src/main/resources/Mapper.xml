@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zx.soft.data.store.dao.Dao">
+	<insert id="insertQQInfo"  parameterType="QQInfo"  >
+	              INSERT INTO QQInfos (account,nickname,QB,QD,address,ip,time)  VALUES  (#{account},#{nickname},#{QB}, #{QD},#{address},#{ip},#{time});
+	</insert>
+		<insert id="insertBankClientInfo"  parameterType="BankClientInfo"  >
+	              INSERT INTO BankClientInfos_1000 (telephone,name,idcard,address,bank,account,remainingmoney)  VALUES  (#{telephone},#{name},#{idcard}, #{address},#{bank},#{account},#{remainingmoney});
+	</insert>
+	
+	<insert id="insertCarOwner_HEB"  parameterType="CarOwner_HEB"  >
+	              INSERT INTO CarOwners (license,size,name,address,registry,operation,truckname,source,sign1, sign2,time_from,time_to,time_middle,bill,pledge,tel)   
+	              VALUES  (#{license},#{size},#{name},#{address},#{registry},#{operation},#{truckname},#{source},#{sign1},#{sign2},#{time_from},#{time_to},#{time_middle},#{bill},#{pledge},#{tel})
+	</insert>
+	<insert id="insertCSDNInfo"  parameterType="CSDNInfo"  >
+	              INSERT INTO CSDNInfos (username,password,email)    VALUES  (#{username},#{password},#{email})
+	</insert>
+		<insert id="insertFeedBack_ZH"  parameterType="FeedBack_ZH"  >
+	              INSERT INTO feedback_ZH (city_id,user_id,category,title,contact,content,create_time)  VALUES  (#{city_id},#{user_id},#{category},#{title},#{contact},#{content},#{create_time});
+	</insert>
+		<insert id="insertLianTongVIPInfo"  parameterType="LianTongVIPInfo"  >
+	              INSERT INTO LianTongVIPInfos (manager,manager_tel,clientname,client_tel,address,highLevel,memberLevel,serviceLevel)   VALUES  (#{manager},#{manager_tel},#{clientname}, #{client_tel},#{address},#{highLevel},#{memberLevel},#{serviceLevel});
+	</insert>
+	
+		<insert id="insertMiZheInfo"  parameterType="MiZheInfo"  >
+	              INSERT INTO MiZheInfos (email,password,data1,data2,bindingStatus)  VALUES  (#{email},#{password},#{data1}, #{data2},#{bindingStatus});
+	</insert>
+		<insert id="insertShengDaInfo"  parameterType="ShengDaInfo"  >
+	              INSERT INTO wangyi (account,password)  VALUES  (#{account},#{password});
+	</insert>
+		<insert id="insertSubscribe_ZH"  parameterType="Subscribe_ZH"  >
+	              INSERT INTO Subscribe_ZH (email,city_id,secret)  VALUES  (#{email},#{city_id},#{secret});
+	</insert>
+		<insert id="insertWanInfo"  parameterType="WanInfo"  >
+insert into user(username,email,wan,password,field1,field2,tel,field3) VALUES(#{username},#{email},#{wan},#{password},#{field1},#{field2},#{tel},#{field3});
+	</insert>
+		<insert id="insertWebSite1Info"  parameterType="WebSite1Info"  >
+	              INSERT INTO WebSite1Infos (username,email,password)  VALUES  (#{username},#{email},#{password});
+	</insert>
+		<insert id="insertWuBaInfo"  parameterType="WuBaInfo"  >
+	              INSERT INTO WuBaInfos (account,password,tradingTreasure,remainingBalance,telephoneStatus,emailStatus,realName,licenseStatus)  
+	              VALUES  (#{account},#{password},#{tradingTreasure}, #{remainingBalance},#{telephoneStatus},#{emailStatus},#{realName},#{licenseStatus});
+	</insert>
+		<insert id="insertZgmenInfo"  parameterType="ZgmenInfo"  >
+	              INSERT INTO Zgmen (name,cardNo,descriot,ctfTp,ctfId,gender,birthday,address,zip,dirty,district1,
+	              district2,district3,district4,district5,district6,firstNm,lastNm,duty,mobile,tel,fax,email,nation,taste,
+	              education,company,cTel,cAddress,cZip,family,version)  VALUES  (#{name},#{cardNo},#{descriot},#{ctfTp},#{ctfId},#{gender},
+	              #{birthday},#{address},#{zip},#{dirty},#{district1},#{district2}
+	              ,#{district3},#{district4},#{district5},#{district6},#{firstNm},#{lastNm},#{duty},#{mobile},
+	              #{tel},#{fax},#{email},#{nation},#{taste},#{education},#{company},#{cTel},#{cAddress},#{cZip},#{family},#{version});
+	</insert>
+	
+
+	
+	
+	
+	
+	
+</mapper>

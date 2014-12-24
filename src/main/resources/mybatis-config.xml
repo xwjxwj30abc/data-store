@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- 给实体类增加一个别名 -->
+		<typeAlias type="zx.soft.data.store.domain.QQInfo" alias="QQInfo" />
+		<typeAlias type="zx.soft.data.store.domain.ShengDaInfo"
+			alias="ShengDaInfo" />
+		<typeAlias type="zx.soft.data.store.domain.BankClientInfo"
+			alias="BankClientInfo" />
+		<typeAlias type="zx.soft.data.store.domain.LianTongVIPInfo"
+			alias="LianTongVIPInfo" />
+		<typeAlias type="zx.soft.data.store.domain.MiZheInfo" alias="MiZheInfo" />
+		<typeAlias type="zx.soft.data.store.domain.WuBaInfo" alias="WuBaInfo" />
+		<typeAlias type="zx.soft.data.store.domain.WebSite1Info"
+			alias="WebSite1Info" />
+		<typeAlias type="zx.soft.data.store.domain.Subscribe_ZH"
+			alias="Subscribe_ZH" />
+		<typeAlias type="zx.soft.data.store.domain.FeedBack_ZH"
+			alias="FeedBack_ZH" />
+		<typeAlias type="zx.soft.data.store.domain.CarOwner_HEB"
+			alias="CarOwner_HEB" />
+		<typeAlias type="zx.soft.data.store.domain.CSDNInfo" alias="CSDNInfo" />
+		<typeAlias type="zx.soft.data.store.domain.ZgmenInfo" alias="ZgmenInfo" />
+		<typeAlias type="zx.soft.data.store.domain.WanInfo" alias="WanInfo" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://192.168.6.120:3306/sentimentsearch?useUnicode=true&amp;characterEncoding=utf-8" />
+				<property name="username" value="xuwenjuan" />
+				<property name="password" value="xuwenjuan" /> 
+				<property name="driver.encoding" value="utf-8" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="Mapper.xml" />
+	</mappers>
+</configuration>

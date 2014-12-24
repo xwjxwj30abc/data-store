@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 	 
+ 	<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+<bean id="manager" class="zx.soft.data.store.core.Manager">
+<!-- <constructor-arg  ref="QQInfoOperate"></constructor-arg>   -->
+<!--  <constructor-arg  ref="carOwner_HEBOperate"></constructor-arg>   -->
+ <constructor-arg  ref="LianTongVIPInfoOperate"></constructor-arg> 
+</bean>
+
+<bean id="QQInfoOperate"  class="zx.soft.data.store.model.QQInfoOperate">
+<constructor-arg  name="fileName"  value="classpath:h.txt"></constructor-arg>
+</bean>
+
+<bean id="carOwner_HEBOperate"  class="zx.soft.data.store.model.CarOwner_HEBOperate">
+<constructor-arg  name="excelName"  value="classpath:HEB.xls"></constructor-arg> 
+</bean>
+
+<bean id="LianTongVIPInfoOperate"  class="zx.soft.data.store.model.LianTongVIPInfoOperate">
+<constructor-arg  name="excelName"  value="classpath:LianTongVIP.xls"></constructor-arg> 
+</bean>
+
+
+</beans>
